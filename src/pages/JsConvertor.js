@@ -6,7 +6,6 @@ import "./Register.css";
 const JsConvertor = () => {
   const [text, setText] = useState("");
   const [code, setCode] = useState("");
-  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();

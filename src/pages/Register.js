@@ -19,15 +19,15 @@ const Register = () => {
         email,
         password,
       });
-      if (response.request.status == 201) {
+      if (response.request.status === 201) {
         toast.success("User is successfully registered");
         navigate("/login");
       }
     } catch (err) {
       console.log(err);
-      if (err.response.request.status == 409) {
+      if (err.response.request.status === 409) {
         toast.error(err.response.data.msg);
-      } else if (err.response.request.status == 400) {
+      } else if (err.response.request.status === 400) {
         toast.error(err.response.data.msg);
       } else {
         toast.error(err.response.data.msg);
