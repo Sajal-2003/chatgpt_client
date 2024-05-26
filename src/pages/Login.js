@@ -21,7 +21,7 @@ const Login = () => {
       toast.success("Login successfully");
       navigate("/");
     } catch (err) {
-      if (err.response.request.status == 400) {
+      if (err.response.request.status === 400) {
         toast.error(err.response.data.msg);
       }
       console.log(err);
