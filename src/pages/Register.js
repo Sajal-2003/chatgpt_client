@@ -14,11 +14,14 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      var response = await axios.post("/api/v1/auth/register", {
-        username,
-        email,
-        password,
-      });
+      var response = await axios.post(
+        "https://chatgpt-backend-1ss4.onrender.com/api/v1/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       if (response.request.status === 201) {
         toast.success("User is successfully registered");
         navigate("/login");
