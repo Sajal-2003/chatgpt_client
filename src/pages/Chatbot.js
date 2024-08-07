@@ -11,7 +11,7 @@ const Chatbot = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://chatgpt-backend-1ss4.onrender.com/api/v1/openai/chatbot",
+        "http://localhost:8080/api/v1/openai/chatbot",
         { text }
       );
       setResponse(data);

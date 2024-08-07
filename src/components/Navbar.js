@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://chatgpt-backend-1ss4.onrender.com/api/v1/auth/logout");
+      await axios.post("http://localhost:8080/api/v1/auth/logout");
       localStorage.removeItem("authToken");
       toast.success("Logout Successfully");
       Navigate("/login");
